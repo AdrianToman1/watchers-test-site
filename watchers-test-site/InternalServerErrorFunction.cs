@@ -11,7 +11,7 @@ namespace watchers_test_site
     {
         [FunctionName("InternalServerErrorFunction")]
         public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "InternalServerError")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "InternalServerError")] HttpRequest req,
             ILogger log)
         {
             return new InternalServerErrorResult();

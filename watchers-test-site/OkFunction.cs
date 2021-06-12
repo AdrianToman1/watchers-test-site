@@ -10,7 +10,7 @@ namespace watchers_test_site
     {
         [FunctionName("OkFunction")]
         public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "OK")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "OK")] HttpRequest req,
             ILogger log)
         {
             return new OkResult();
